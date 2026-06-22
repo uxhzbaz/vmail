@@ -15,6 +15,12 @@ database_id = "f0036fd4-0c79-442d-98ee-89ae686ce21f"
 # fix: 将迁移目录直接配置在这里，这是 D1 自动迁移的标准做法
 migrations_dir = "worker/drizzle"
 
+
+# 定义环境变量和密钥
+[vars]
+EMAIL_DOMAIN = "vmail.baox.cc.cd"
+SHOW_AFF = "${SHOW_AFF}"
+ENABLE_OPENAPI = "${ENABLE_OPENAPI}"
 # 配置邮件处理
 [triggers]
 crons = ["0 * * * *"] # 每小时运行一次清理任务
